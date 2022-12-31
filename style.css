@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+  --clr-primary-red: hsl(0, 100%, 66%);
+  --clr-primary-gradient: linear-gradient(90deg,hsl(249, 99%, 64%),hsl(278, 94%, 30%));
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(270, 3%, 87%);
+  --clr-neutral-600: hsl(279, 6%, 55%);
+  --clr-neutral-800: hsl(278, 68%, 11%);
+
+  --ff-base: 'Space Grotesk', sans-serif;
+
+  --fs-300: 0.875rem;
+  --fs-400: 1.125rem;
+
+  --fw-regular: 500;
+
+  --card-size: 75%;
+  --card-mx-size: 30rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  margin: 0;
+}
+
+/* global styles */
+
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-400);
+}
+
+label {
+  font-size: var(--fs-300);
+}
+
+input {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--clr-neutral-400);
+  font-size: var(--fs-400);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+}
+
+.btn {
+
+}
+
+/* project */
+
+.color-section {
+  width:100%;
+  height: 40%;
+  background-image: url('./images/bg-main-mobile.png');
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+}
+
+.front-side,
+.back-side {
+  width: var(--card-size);
+  max-width: var(--card-mx-size);
+}
+
+.form-section {
+  width: 100%;
+  height: 60%;
+  display: grid;
+  place-items: center;
+  padding: 0 1rem;
+}
+
+.card-details-form {
+  max-width: 30rem;
+}
+
+/* utility */
+:where(.flow :not(:first-child)) {
+  margin-top: 1rem;
+}
+
+.stack {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.even-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  gap: 0.5rem;
+}
+
+.even-column div {
+  margin: 0;
+}
