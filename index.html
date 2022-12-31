@@ -19,8 +19,19 @@
   <body>
     <main>
       <section class="color-section">
-          <img class="card back-side" src="./images/bg-card-back.png" alt="back side of card" />
-          <img class='card front-side' src="./images/bg-card-front.png" alt="" />
+          <div class="card back-side">
+            <img class="card-img" src="./images/bg-card-back.png" alt="back side of card" />
+          </div>
+          <div class="card front-side">
+            <img class='card-img' src="./images/bg-card-front.png" alt="" />
+            <div class="card-info">
+              <p class="card-num">0000 0000 0000 0000</p>
+              <div class="space-between">
+                <p class="card-name fs-300">JANE APPLESEED</p>
+                <p class="card-exp fs-300">00/00</p>
+              </div>
+            </div>
+          </div>
       </section>
       <section class="form-section">
         <form class="card-details-form flow">
@@ -53,11 +64,10 @@
               <input type="number" maxlength="3" placeholder="e.g. 123" id="card-cvc">
             </div>
           </div>
-          <button class="btn" type="submit"></button>
+          <button class="btn" type="submit">Confirm</button>
         </form>
       </section>
     </main>
-
     <script src="index.js"></script>
   </body>
 </html>

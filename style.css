@@ -16,8 +16,8 @@
 
   --fw-regular: 500;
 
-  --card-size: 75%;
-  --card-mx-size: 30rem;
+  --card-size: 75vw;
+  --card-mx-size: 20rem;
 }
 
 * {
@@ -33,6 +33,7 @@ input {
 /* global styles */
 
 body {
+  width: 100vw;
   font-family: var(--ff-base);
   font-size: var(--fs-400);
 }
@@ -52,35 +53,56 @@ input {
 }
 
 .btn {
-
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: .5rem;
+  letter-spacing: 1px;
+  color: var(--clr-neutral-100);
+  background: var(--clr-neutral-800);
 }
 
 /* project */
 
 .color-section {
   width:100%;
-  height: 40%;
+  height: 20vh;
   background-image: url('./images/bg-main-mobile.png');
   background-repeat: no-repeat;
   position: relative;
 }
 
 .card {
-  position: absolute;
-}
-
-.front-side,
-.back-side {
+  position: relative;
   width: var(--card-size);
   max-width: var(--card-mx-size);
 }
 
+.card-img {
+  width: 100%;
+}
+
+.front-side {
+  top: -2rem;
+  left: 1rem;
+}
+
+.back-side {
+  top: 2.5rem;
+  left: 4.5rem;
+}
+
+.card-info {
+  position: absolute;
+  inset: 0;
+}
+
 .form-section {
   width: 100%;
-  height: 60%;
+  height: 25vh;
   display: grid;
   place-items: center;
   padding: 0 1rem;
+  margin: 2rem 0;
 }
 
 .card-details-form {
@@ -106,4 +128,14 @@ input {
 
 .even-column div {
   margin: 0;
+}
+
+.space-between {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
 }
